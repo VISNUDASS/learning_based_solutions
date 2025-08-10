@@ -1,0 +1,49 @@
+# -----------------------------
+# Branching & Merging Hands-On Lab (GitHub version)
+# -----------------------------
+
+# 1. Navigate to your repo
+cd /c/Users/visnu/GitDemo
+
+# 2. Create a New Branch
+git branch GitNewBranch
+
+# 3. List Local and Remote Branches
+git branch -a
+
+# 4. Switch to New Branch
+git checkout GitNewBranch
+
+# 5. Add a New File in Branch
+echo "This is a file in GitNewBranch" > branchfile.txt
+
+# 6. Stage and Commit in Branch
+git add branchfile.txt
+git commit -m "Added branchfile.txt in GitNewBranch"
+
+# 7. Check Status
+git status
+
+# 8. Switch Back to Main
+git checkout main
+
+# 9. Show Differences in CLI
+git diff main GitNewBranch
+
+# 10. Merge Branch into Main
+git merge GitNewBranch
+
+# 11. View Merge History
+git log --oneline --graph --decorate
+
+# 12. Delete Merged Branch
+git branch -d GitNewBranch
+
+# 13. Verify Status
+git status
+
+# 14. Push Updated Main to Remote
+git push origin main
+
+# 15. (Optional) Push Branch to Remote before merge — useful for Pull Request
+# git push origin GitNewBranch
